@@ -12,11 +12,20 @@
 </form>
 
 
-<div class="row" >
-    <ul class="collection">
-        <li class="collection-item avatar" ng-repeat="movie in ctrl.movies">
-        <span class="title">{{movie.Title}}</span>
-        <p>Year: {{ movie.Year }}</p>
-        </li>
-    </ul>
+
+<div class="row">
+    <div class="col s12 m2" data-ng-repeat="movie in ctrl.movies">
+        <div class="card">
+            <div class="card-image">
+              <img src="{{ movie.Poster}}">
+            </div>
+            <div class="card-content">
+                <span class="title">{{ movie.Title }}</span>
+                <p>Year: {{ movie.Year }}</p>
+            </div>
+            <div class="card-action">
+                <p>This is the action</p>
+            </div>
+        </div>
+    </div>
 </div>
