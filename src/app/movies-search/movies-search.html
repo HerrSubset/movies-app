@@ -1,0 +1,22 @@
+<h1>{{ ctrl.title }}</h1>
+
+<form class="col s12 m12" novalidate name="ctrl.searchForm" data-ng-submit="ctrl.searchMovie(movie)">
+    <div class="row">
+        <div class="input-field col s12 m12">
+            <label for="title_input">Title</label>
+            <input type="text" id="title_input" data-ng-model="movie.title" required/>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-waves-effect" data-ng-disabled="ctrl.searchForm.$invalid">Search</button>
+</form>
+
+
+<div class="row" >
+    <ul class="collection">
+        <li class="collection-item avatar" ng-repeat="movie in ctrl.movies">
+        <span class="title">{{movie.Title}}</span>
+        <p>Year: {{ movie.Year }}</p>
+        </li>
+    </ul>
+</div>
