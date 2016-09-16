@@ -48,6 +48,7 @@
     "karma-phantomjs-launcher": "^1.0.0",
     "karma-phantomjs-shim": "^1.1.2",
     "karma-webpack": "^1.7.0",
+    "materialize-loader": "^1.1.1",
     "ng-annotate-loader": "^0.0.10",
     "phantomjs-prebuilt": "^2.1.6",
     "postcss-loader": "^0.8.0",

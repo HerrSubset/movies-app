@@ -1,4 +1,5 @@
-export class MoviesSearchController {
+/*@ngInject*/
+class MoviesSearchController {
     constructor(MovieService) {
         this.title = "Search";
         this.actionText = "Save Movie"
@@ -16,3 +17,6 @@ export class MoviesSearchController {
         this.MovieService.storeMovie(selectedMovie.imdbId);
     }
 }
+
+
+export default MoviesSearchController;

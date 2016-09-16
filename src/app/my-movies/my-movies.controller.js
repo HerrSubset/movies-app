@@ -1,4 +1,5 @@
-export class MyMoviesController {
+/*@ngInject*/
+class MyMoviesController {
     constructor(MovieService, $location) {
         this.title = "My Movies";
         this.actionText = "Details";
@@ -18,3 +19,5 @@ export class MyMoviesController {
         this.$location.path(`/movies/${selectedMovie.id}`)
     }
 }
+
+export default MyMoviesController;

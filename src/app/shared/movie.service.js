@@ -1,4 +1,5 @@
-export class MovieService {
+/*@ngInject*/
+class MovieService {
     constructor($http, apiUrl) {
         this.$http = $http;
         this.apiUrl = apiUrl;
@@ -51,3 +52,6 @@ export class MovieService {
         });
     }
 }
+
+
+export default MovieService;

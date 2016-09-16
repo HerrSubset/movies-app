@@ -1,7 +1,5 @@
+/*@ngInject*/
 class MoviesSearchFormController {
-    constructor() {
-
-    }
 
     search(movie) {
         console.log("searching movie");

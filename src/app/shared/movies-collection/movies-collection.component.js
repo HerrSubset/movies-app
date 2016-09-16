@@ -1,7 +1,5 @@
+/*@ngInject*/
 class MoviesCollectionController {
-    constructor() {
-
-    }
 
     selected(movie) {
         this.onSelected({

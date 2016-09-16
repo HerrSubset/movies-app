@@ -1,4 +1,5 @@
-export function appConfig($routeProvider) {
+/*@ngInject*/
+function appConfig($routeProvider) {
 
     $routeProvider.when("/movies/search", {
         template: require("./movies-search-local/movies-search-local.html"),
@@ -29,3 +30,5 @@ export function appConfig($routeProvider) {
     });
     
 }
+
+export default appConfig;

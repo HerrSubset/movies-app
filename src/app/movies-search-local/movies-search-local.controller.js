@@ -1,4 +1,5 @@
-export class MoviesSearchLocalController {
+/*@ngInject*/
+class MoviesSearchLocalController {
     constructor(MovieService, $location) {
         this.$location = $location;
         this.MovieService = MovieService;
@@ -17,3 +18,6 @@ export class MoviesSearchLocalController {
         this.$location.path(`/movies/${selectedMovie.id}`)
     }
 }
+
+
+export default MoviesSearchLocalController;

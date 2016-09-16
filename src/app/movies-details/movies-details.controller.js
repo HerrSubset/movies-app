@@ -1,4 +1,5 @@
-export class MoviesDetailsController {
+/*@ngInject*/
+class MoviesDetailsController {
     constructor($routeParams, MovieService, $location) {
         this.MovieService = MovieService;
         this.$location = $location;
@@ -17,3 +18,6 @@ export class MoviesDetailsController {
         });
     }
 }
+
+
+export default MoviesDetailsController;
