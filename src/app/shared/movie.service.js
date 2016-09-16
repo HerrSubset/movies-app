@@ -10,6 +10,12 @@ export class MovieService {
         });
     }
 
+    getCatalogMovies(title) {
+        return this.$http.get(`${this.apiUrl}/Movies/collection?title=${title}`).then((response) => {
+            return response.data;
+        });
+    }
+
     getAllCatalogMovies() {
         return this.$http.get(`${this.apiUrl}/Movies`).then((response) => {
             return response.data;

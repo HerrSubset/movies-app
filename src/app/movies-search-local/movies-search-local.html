@@ -1,1 +1,6 @@
-<h1>Local Search</h1>
+<h1>Search Collection</h1>
+
+<movies-search-form on-search="ctrl.searchMovie(movieTitle)"></movies-search-form>
+
+
+<movies-collection movies="ctrl.movies" on-selected="ctrl.addMovie(selectedMovie)" action-text="ctrl.actionText"></movies-collection>
