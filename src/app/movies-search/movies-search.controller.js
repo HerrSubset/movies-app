@@ -1,22 +1,13 @@
 export class MoviesSearchController {
-    constructor($http, apiUrl) {
+    constructor(MovieService) {
         this.title = "Search";
         this.movies = [];
-        this.$http = $http;
-        this.apiUrl = apiUrl;
-
-        this.init();
-    }
-
-    init() {
-
+        this.MovieService = MovieService;
     }
 
     searchMovie(movie) {
-        var url = `${this.apiUrl}s=${encodeURI(movie.title)}`;
-        console.log("Sending request to " + url);
-        this.$http.get(url).then((response) => {
-            this.movies = response.data.Search;
+        this.MovieService.getOnlineMovies(movie.title).then((result) => {
+            this.movies = result;
         });
     }
 }
