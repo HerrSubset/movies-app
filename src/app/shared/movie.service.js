@@ -25,9 +25,9 @@ export class MovieService {
         console.log(postObject);
 
         this.$http.post(`${this.apiUrl}/Movies`, postObject).then( () => {
-            console.log("post success");
+            Materialize.toast('Movie Saved', 2000);
         }, () => {
-            console.log("post failed")
+            Materialize.toast('Saving movie failed', 2000);
         });
     }
 }
