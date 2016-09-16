@@ -5,6 +5,12 @@ export function appConfig($routeProvider) {
         controller: "MoviesSearchController",
         controllerAs: "ctrl"
     });
+
+    $routeProvider.when("/movies/:id", {
+        template: require("./movies-details/movies-details.html"),
+        controller: "MoviesDetailsController",
+        controllerAs: "ctrl"
+    });
     
     $routeProvider.when("/movies", {
         template: require("./my-movies/my-movies.html"),

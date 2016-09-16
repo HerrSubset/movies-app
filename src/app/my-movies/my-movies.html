@@ -1,4 +1,4 @@
 <h1>{{ ctrl.title }}</h1>
 
 
-<movies-collection movies="ctrl.movies"></movies-collection>
+<movies-collection movies="ctrl.movies" on-selected="ctrl.showDetails(selectedMovie)" action-text="ctrl.actionText"></movies-collection>

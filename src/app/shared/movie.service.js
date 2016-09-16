@@ -30,4 +30,18 @@ export class MovieService {
             Materialize.toast('Saving movie failed', 2000);
         });
     }
+
+    getCatalogMovie(id) {
+        return this.$http.get(`${this.apiUrl}/Movies/${id}`).then((response) => {
+            return response.data;
+        });
+    }
+
+    removeCatalogMovie(id) {
+        return this.$http.delete(`${this.apiUrl}/Movies/${id}`).then( () => {
+            Materialize.toast('Movie Deleted', 2000);
+        }, () => {
+            Materialize.toast('Movie could not be deleted', 2000);
+        });
+    }
 }
