@@ -1,6 +1,7 @@
 export class MoviesSearchController {
     constructor(MovieService) {
         this.title = "Search";
+        this.actionText = "Save Movie"
         this.movies = [];
         this.MovieService = MovieService;
     }

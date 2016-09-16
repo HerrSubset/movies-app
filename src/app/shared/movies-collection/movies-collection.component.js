@@ -16,6 +16,7 @@ export var MoviesCollectionComponent = {
     controller: MoviesCollectionController,
     bindings: {
         movies: "<",
+        actionText: "<",
         onSelected: "&"
     }
 }
