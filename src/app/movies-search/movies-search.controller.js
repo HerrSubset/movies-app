@@ -6,8 +6,8 @@ export class MoviesSearchController {
         this.MovieService = MovieService;
     }
 
-    searchMovie(movie) {
-        this.MovieService.getOnlineMovies(movie.title).then((result) => {
+    searchMovie(movieTitle) {
+        this.MovieService.getOnlineMovies(movieTitle).then((result) => {
             this.movies = result;
         });
     }

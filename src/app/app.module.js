@@ -9,6 +9,7 @@ import { MovieService } from "./shared/movie.service";
 // import { MoviesAddController } from "./contacts-add/contacts-add.controller";
 
 import { MoviesCollectionComponent } from "./shared/movies-collection/movies-collection.component";
+import { MoviesSearchFormComponent } from "./shared/movies-search-form/movies-search-form.component";
 
 
 
@@ -21,4 +22,5 @@ export default angular.module("moviesApp", ["ngRoute"])
         .controller("MoviesDetailsController", MoviesDetailsController)
         .service("MovieService", MovieService)
         .component("moviesCollection", MoviesCollectionComponent)
+        .component("moviesSearchForm", MoviesSearchFormComponent)
         .name;
