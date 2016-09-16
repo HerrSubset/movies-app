@@ -10,4 +10,8 @@ export class MoviesSearchController {
             this.movies = result;
         });
     }
+
+    addMovie(selectedMovie) {
+        this.MovieService.storeMovie(selectedMovie.imdbId);
+    }
 }

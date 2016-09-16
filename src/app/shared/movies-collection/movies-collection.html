@@ -2,14 +2,14 @@
     <div class="col s12 m2" data-ng-repeat="movie in $ctrl.movies">
         <div class="card">
             <div class="card-image">
-              <img src="{{ movie.poster}}">
+              <img src="{{ movie.poster }}">
             </div>
             <div class="card-content">
                 <span class="title">{{ movie.title }}</span>
                 <p>Year: {{ movie.year }}</p>
             </div>
             <div class="card-action">
-                <p>This is the action</p>
+                <a data-ng-click="$ctrl.selected(movie)">This is the action</a>
             </div>
         </div>
     </div>

@@ -15,4 +15,19 @@ export class MovieService {
             return response.data;
         });
     }
+
+    storeMovie(id) {
+        var postObject = {
+            imdbId: id
+        };
+
+        console.log("posting: ");
+        console.log(postObject);
+
+        this.$http.post(`${this.apiUrl}/Movies`, postObject).then( () => {
+            console.log("post success");
+        }, () => {
+            console.log("post failed")
+        });
+    }
 }
